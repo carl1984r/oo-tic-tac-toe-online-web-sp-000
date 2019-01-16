@@ -60,7 +60,13 @@ def turn
   input = gets
   input_to_index(input)
   current_player
-
+  if valid_move?(input_to_index)
+       move(input_to_index, current_player="X")
+       display_board
+     else
+       puts "Wrong entry."
+       turn
+     end
 
 
 
