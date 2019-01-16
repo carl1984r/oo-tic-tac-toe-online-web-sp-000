@@ -113,7 +113,7 @@ def winner
   end
 
   def play
-    until winner
+    until over?
       turn
       draw?
     end
