@@ -97,7 +97,7 @@ def full?
 end
 
 def draw?
- full? == true && won? == false
+ full? && won? 
 end
 
 def over?
