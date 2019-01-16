@@ -67,9 +67,5 @@ def turn
        puts "Wrong entry."
        turn
      end
-
-
-
-  end
-
+end
 end
