@@ -60,8 +60,8 @@ def turn
   input = gets
   input_to_index(input)
   current_player
-  
-  
+
+
 
 
   end
