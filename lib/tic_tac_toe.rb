@@ -90,4 +90,11 @@ end
   return false
 end
 
+def full?
+ @board.all? do |y|
+   y == "X" || y == "O"
+ end
+end
+
+
 end
