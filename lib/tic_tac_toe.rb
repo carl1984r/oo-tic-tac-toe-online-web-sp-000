@@ -105,8 +105,8 @@ won? || draw?
 end
 
 def winner
-  if  over?  || draw?
-      @board[won?(board)[0]]
+  if  over? || draw?
+      @board[won?[0]]
     else
       print
     end
