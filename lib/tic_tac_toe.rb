@@ -96,5 +96,9 @@ def full?
  end
 end
 
+def draw?
+ full? == true && won? == false
+end
+
 
 end
