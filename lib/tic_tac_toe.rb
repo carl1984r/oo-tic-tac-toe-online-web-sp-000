@@ -100,5 +100,9 @@ def draw?
  full? == true && won? == false
 end
 
+def over?
+won? || draw?
+end
+
 
 end
