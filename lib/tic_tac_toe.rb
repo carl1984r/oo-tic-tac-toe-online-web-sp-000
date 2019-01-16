@@ -19,24 +19,24 @@ def input_to_index(input)
   return input.to_i - 1
 end
 
-def move(input_to_index, current_player="X")
-  @board[input_to_index] = current_player
+def move(index, current_player="X")
+  @board[index] = current_player
 end
 
-def position_taken?(input_to_index)
-  if  @board[input_to_index] != "X" && @board[input_to_index] != "O"
+def position_taken?(index)
+  if  @board[index] != "X" && @board[index] != "O"
       return false
   else
-      @board[input_to_index] == "X" && @board[input_to_index] == "O"
+      @board[index] == "X" && @board[index] == "O"
       return true
   end
 end
 
-def valid_move?(input_to_index)
-   if position_taken?(input_to_index) == false && input_to_index.between?(0, 8)
+def valid_move?(index)
+   if position_taken?(index) == false && index.between?(0, 8)
       return true
    else
-      position_taken?(input_to_index) == true
+      position_taken?(index) == true
       return false
   end
   end
@@ -58,10 +58,10 @@ end
 def turn
   puts "Please enter 1-9:"
   input = gets
-  input_to_index(input)
+  index = input_to_index(input)
   current_player
-  if valid_move?(input_to_index)
-       move(input_to_index, current_player="X")
+  if valid_move?(index)
+       move(index, current_player="X")
        display_board
      else
        puts "Wrong entry."
