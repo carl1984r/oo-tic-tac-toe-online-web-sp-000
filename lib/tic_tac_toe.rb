@@ -63,9 +63,9 @@ def turn
   if valid_move?(index)
        move(index, current_player="X")
        display_board
-     else
-       puts "Wrong entry."
-       turn
-     end
+  else
+    puts "Wrong entry."
+    turn
+  end
 end
 end
