@@ -69,5 +69,25 @@ def turn
   end
 end
 
+def won?
+
+  WIN_COMBINATIONS.each do |f|
+  index0 = f[0]
+  index1 = f[1]
+  index2 = f[2]
+
+
+  position0 = @board[index0]
+  position1 = @board[index1]
+  position2 = @board[index2]
+
+  if position0 == "X"  && position1 == "X" && position2 == "X"  ||
+     position0 == "O"  && position1 == "O" && position2 == "O"
+
+  return f
+  end
+end
+  return false
+end
 
 end
